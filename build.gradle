@@ -1,11 +1,14 @@
 plugins {
     id 'java'
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version '4.0.4'
 }
 
 group 'parcial2web.johanna.rodriguez'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
+mainClassName="parcial2web.johanna.rodriguez.Main"
 
 repositories {
     mavenCentral()
@@ -13,4 +16,23 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    compile 'org.hibernate:hibernate-core:5.1.0.Final'
+    compile 'org.hibernate:hibernate-entitymanager:5.1.0.Final'
+    compile 'com.h2database:h2:1.4.191'
+    compile 'com.sparkjava:spark-core:2.7.2'
+    compile 'com.sparkjava:spark-template-freemarker:2.7.1'
+    compile 'org.freemarker:freemarker:2.3.26-incubating'
+    compile "org.slf4j:slf4j-simple:1.7.21"
+    compile 'org.jasypt:jasypt:1.9.2'
+}
+
+shadowJar {
+    baseName = 'Parcial2Web'
+    classifier = null
+    version = null
+}
+
+task stage {
+    dependsOn shadowJar
 }
