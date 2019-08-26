@@ -207,7 +207,7 @@ public class Rutas {
         get("/inicio/:pagina", (req, res) -> {
             StringWriter writer = new StringWriter();
             Map<String, Object> atributos = new HashMap<>();
-            Template template = configuration.getTemplate("plantillas/index.ftl");
+            Template template = configuration.getTemplate("templates/index.ftl");
 
             int pagina = Integer.parseInt(req.params("pagina"));
 
@@ -232,7 +232,7 @@ public class Rutas {
         get("/login", (req, res) -> {
             StringWriter writer = new StringWriter();
             Map<String, Object> atributos = new HashMap<>();
-            Template template = configuration.getTemplate("plantillas/login.ftl");
+            Template template = configuration.getTemplate("templates/login.ftl");
             template.process(atributos, writer);
 
             return writer;
@@ -276,7 +276,7 @@ public class Rutas {
         get("/registrar", (req, res) -> {
             StringWriter writer = new StringWriter();
             Map<String, Object> atributos = new HashMap<>();
-            Template template = configuration.getTemplate("plantillas/registro.ftl");
+            Template template = configuration.getTemplate("templates/registro.ftl");
 
             atributos.put("estaLogueado", req.session().attribute("sesionUsuario") != null);
             atributos.put("nombreUsuario", nombreUsuario);
@@ -331,7 +331,7 @@ public class Rutas {
             get("/crear", (req, res) -> {
                 StringWriter writer = new StringWriter();
                 Map<String, Object> atributos = new HashMap<>();
-                Template template = configuration.getTemplate("plantillas/crear-articulo.ftl");
+                Template template = configuration.getTemplate("templates/crear-articulo.ftl");
 
                 atributos.put("estaLogueado", req.session().attribute("sesionUsuario") != null);
                 atributos.put("nombreUsuario", nombreUsuario);
@@ -368,7 +368,7 @@ public class Rutas {
             get("/editar/:id", (req, res) -> {
                 StringWriter writer = new StringWriter();
                 Map<String, Object> atributos = new HashMap<>();
-                Template template = configuration.getTemplate("plantillas/editar-articulo.ftl");
+                Template template = configuration.getTemplate("templates/editar-articulo.ftl");
 
                 Articulo articulo = servicioArticulo.getInstancia().find(Long.parseLong(req.params("id")));
 
@@ -414,7 +414,7 @@ public class Rutas {
             get("/eliminar/:id", (req, res) -> {
                 StringWriter writer = new StringWriter();
                 Map<String, Object> atributos = new HashMap<>();
-                Template template = configuration.getTemplate("plantillas/eliminar-articulo.ftl");
+                Template template = configuration.getTemplate("templates/eliminar-articulo.ftl");
 
                 Articulo articulo = servicioArticulo.getInstancia().find(Long.parseLong(req.params("id")));
 
@@ -439,7 +439,7 @@ public class Rutas {
             get("/:id", (req, res) -> {
                 StringWriter writer = new StringWriter();
                 Map<String, Object> atributos = new HashMap<>();
-                Template template = configuration.getTemplate("plantillas/articulo.ftl");
+                Template template = configuration.getTemplate("templates/articulo.ftl");
 
                 Articulo articulo = servicioArticulo.getInstancia().find(Long.parseLong(req.params("id")));
 
@@ -554,7 +554,7 @@ public class Rutas {
         get("/etiqueta/:id", (req, res) -> {
             StringWriter writer = new StringWriter();
             Map<String, Object> atributos = new HashMap<>();
-            Template template = configuration.getTemplate("plantillas/articulos-por-etiqueta.ftl");
+            Template template = configuration.getTemplate("templates/articulos-por-etiqueta.ftl");
 
             Etiqueta etiquetaSeleccionada = servicioEtiqueta.getInstancia().find(Long.parseLong(req.params("id")));
 
@@ -582,7 +582,7 @@ public class Rutas {
 
         notFound((req, res) -> {
             StringWriter writer = new StringWriter();
-            Template template = configuration.getTemplate("plantillas/404.ftl");
+            Template template = configuration.getTemplate("templates/404.ftl");
             Map<String, Object> atributos = new HashMap<>();
             atributos.put("estaLogueado", req.session().attribute("sesionUsuario") != null);
             atributos.put("nombreUsuario", nombreUsuario);

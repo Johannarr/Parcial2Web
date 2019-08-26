@@ -12,7 +12,7 @@
         <class>parcial2web.johanna.rodriguez.encapsulacion.Valoracion</class>
         <class>parcial2web.johanna.rodriguez.encapsulacion.Voto</class>
         <properties>
-            <property name="javax.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/arkhamknightORM" />
+            <property name="javax.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/parcialDB" />
             <property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
             <property name="javax.persistence.jdbc.user" value="sa" />
             <property name="javax.persistence.jdbc.password" value="" />

@@ -21,7 +21,7 @@
                             <strong>Remember me</strong>
                         </label>
                     </div>
-                    <button class="btn btn-outline-primary btn-block my-3" type="submit">
+                    <button href="/inicio"  class="btn btn-outline-primary btn-block my-3" type="submit">
                         ACCEDER
                     </button>
                 </form>
