@@ -6,9 +6,9 @@ import java.io.Serializable;
 @Entity
 public class Usuario implements Serializable {
     @Id
-    private long id;
-    private String username;
+    private Long id;
     private String nombre;
+    private String username;
     private String password;
     private boolean administrator;
     private boolean autor;
@@ -18,23 +18,39 @@ public class Usuario implements Serializable {
 
     }
 
-    public Usuario(String username, String nombre,  String password, boolean administrator, boolean autor, String sesion) {
-        this.username = username;
+    public Usuario(String nombre, String username, String password, boolean administrator, boolean autor, String sesion) {
         this.nombre = nombre;
+        this.username = username;
         this.password = password;
         this.administrator = administrator;
         this.autor = autor;
         this.sesion = sesion;
     }
 
-    public Usuario(Long id, String username,String nombre, String password, boolean administrator, boolean autor, String sesion) {
+    public Usuario(Long id, String nombre, String username, String password, boolean administrator, boolean autor, String sesion) {
         this.id = id;
-        this.username = username;
         this.nombre = nombre;
+        this.username = username;
         this.password = password;
         this.administrator = administrator;
         this.autor = autor;
         this.sesion = sesion;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public boolean isAdministrator() {
+        return administrator;
+    }
+
+    public void setAdministrator(boolean administrator) {
+        this.administrator = administrator;
     }
 
     public long getId() {
@@ -51,14 +67,6 @@ public class Usuario implements Serializable {
 
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
     }
 
     public String getPassword() {
