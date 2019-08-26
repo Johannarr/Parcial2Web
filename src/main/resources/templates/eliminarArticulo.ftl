@@ -6,10 +6,10 @@
             <div class="row">
                 <form class="col-11 py-5" method="post" action="/articulo/eliminar/${articulo.id}">
                     <div class="panel px-2 py-3 bg-white">
-                        Seguro que desea eliminar el articulo <strong>${articulo.titulo}</strong>?
+                        Esta seguro que desea eliminar el articulo <strong>${articulo.titulo}</strong>?
                     </div>
                     <button class="btn btn-outline-primary btn-block my-3" type="submit">
-                        ELIMINAR ARTICULO
+                        ELIMINAR
                     </button>
                 </form>
             </div>

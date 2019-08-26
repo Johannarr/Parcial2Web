@@ -7,27 +7,27 @@
                 <form class="col-11 py-5" method="post" action="/registrarUsuario">
                     <div class="panel px-2 py-3 bg-white">
                         <label for="user"><strong>Nombre de usuario</strong> </label>
-                        <input type="text" class="form-control rounded-0" name="username" placeholder="username"
+                        <input type="text" class="form-control rounded-0" name="username" placeholder="Nombre de Usuario"
                                required=""
                                autofocus=""/>
                         <br>
-                        <label for="password"><strong>Password</strong></label>
-                        <input type="password" class="form-control rounded-0" name="password" placeholder="password"
+                        <label for="password"><strong>Contrasena</strong></label>
+                        <input type="password" class="form-control rounded-0" name="password" placeholder="Contrasena"
                                required=""/>
                         <br>
                         <hr noshade>
                         <input class="form-check-input" type="radio" name="seraAutor">
                         <label class="form-check-label" for="seraAutor">
-                            <strong>Usuario autor</strong>
+                            <strong>Autor</strong>
                         </label>
                         <br>
                         <input class="form-check-input" type="radio" name="seraAdmin">
                         <label class="form-check-label" for="seraAdmin">
-                            <strong>Usuario admin</strong>
+                            <strong>Admin</strong>
                         </label>
                     </div>
                     <button class="btn btn-outline-primary btn-block my-3" type="submit">
-                        REGISTRAR
+                        GUARDAR
                     </button>
                 </form>
             </div>

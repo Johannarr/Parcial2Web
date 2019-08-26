@@ -16,7 +16,7 @@ public class Main {
 
         // Insertando el usuario por defecto (administrador).
         if (servicioUsuario.getInstancia().find(new Long(1)) == null) {
-            servicioUsuario.getInstancia().crear(new Usuario(new Long(1), "Administrador", "admin", "123456", true, true, null));
+            servicioUsuario.getInstancia().crear(new Usuario(new Long(1), "Administrador", "admin", "1234", true, true, null));
         }
 
         // Creando las rutas.

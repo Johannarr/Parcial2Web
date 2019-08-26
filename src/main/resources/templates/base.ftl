@@ -1,4 +1,4 @@
-<#macro pagina logueado=false usuario="" fondo="fondo.png" permisos=false admin=false>
+<#macro pagina logueado=false usuario="" fondo="" permisos=false admin=false>
 <!doctype html>
 <html lang="es">
 <head>
@@ -6,11 +6,9 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Gamestop</title>
+    <title>Blog</title>
     <link rel="stylesheet" href="/estilos/style.css">
 
-    <!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="images/icons/favicon.png"/>
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
     <!--===============================================================================================-->
@@ -66,32 +64,34 @@
             <div class="row">
                 <div class="col-12 p-0">
                     <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark" p-0 boxed-shadow">
-                        <a class="navbar-brand" href="/"><img src="/imagenes/logo.png" width="120" height="110"></a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
+                    <a class="btn btn-link text-light" href="/">
+                        <i class="fa fa-home"></i> Inicio
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <#if logueado>
                                 <ul class="navbar-nav mr-auto">
                                     <#if permisos>
                                         <li class="nav-item">
-                                            <a class="btn btn-link text-light" href="/articulo/crear">
-                                                <i class="fas fa-plus-square"></i> Crear articulo
+                                            <a class="btn btn-link text-light" href="/registrar">
+                                                <i class="fas fa-user-alt"></i> Nuevo usuario
                                             </a>
+
                                         </li>
                                     </#if>
                                     <#if admin>
                                         <li class="nav-item">
-                                            <a class="btn btn-link text-light" href="/registrar">
-                                                <i class="fas fa-user-alt"></i> Registro de usuario
+                                            <a class="btn btn-link text-light" href="/articulo/crear">
+                                                <i class="fas fa-plus-square"></i> Nuevo articulo
                                             </a>
                                         </li>
                                     </#if>
                                 </ul>
-                                <img class="rounded boxed-shadow" src="/imagenes/perfil.jpg" alt="foto de usuario" width="80px" height="80">
                                 <a class="mx-2 nombre-usuario px-3 text-light"><strong>${usuario}</strong></a>
                                 <a class="btn btn-dark mr-2" href="/salir">
-                                    <i class="fas fa-sign-out-alt"></i> Sing out
+                                    <i class="fas fa-sign-out-alt"></i> Salir
                                 </a>
                             </#if>
                         </div>

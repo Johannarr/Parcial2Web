@@ -6,23 +6,23 @@
             <div class="row">
                 <form class="col-11 py-5" method="post" action="/login">
                     <div class="panel px-2 py-3 bg-white">
-                        <label for="user"><strong>Username</strong> </label>
-                        <input type="text" class="form-control rounded-0" name="username" placeholder="username"
+                        <label for="user"><strong>Usuario</strong> </label>
+                        <input type="text" class="form-control rounded-0" name="username" placeholder="Nombre de Usuario"
                                required=""
                                autofocus=""/>
                         <br>
-                        <label for="password"><strong>Password</strong></label>
-                        <input type="password" class="form-control rounded-0" name="password" placeholder="password"
+                        <label for="password"><strong>Contrasena</strong></label>
+                        <input type="password" class="form-control rounded-0" name="password" placeholder="Contrasena"
                                required=""/>
                         <br>
                         <hr noshade>
                         <input class="form-check-input" type="radio" name="guardarSesion">
                         <label class="form-check-label" for="guardarSesion">
-                            <strong>Remember me</strong>
+                            <strong>Recordarme</strong>
                         </label>
                     </div>
                     <button class="btn btn-outline-primary btn-block my-3" type="submit">
-                        ACCEDER
+                        ENTRAR
                     </button>
                 </form>
             </div>

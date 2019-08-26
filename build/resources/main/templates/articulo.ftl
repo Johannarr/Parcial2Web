@@ -9,10 +9,10 @@
                     <strong class=" m-0 float-right">
                         <#if tienePermisos>
                             <a href="/articulo/editar/${articulo.id}" class="text-primary ml-2">
-                                <i class="fas fa-edit"></i> Editar articulo
+                                <i class="fas fa-edit"></i>
                             </a>
                             <a href="/articulo/eliminar/${articulo.id}" class="text-danger ml-2">
-                                <i class="fas fa-minus-circle"></i> Eliminar articulo
+                                <i class="fas fa-minus-circle"></i>
                             </a>
                         </#if>
                     </strong>
@@ -22,11 +22,11 @@
             <div class="col-12 mt-2 bg-dark text-light px-4 rounded-0 login">
                 <div class="row">
                     <h5 class="col-12 pt-3">
-                        <strong>ETIQUETAS</strong>
+                        <th>ETIQUETAS</th>
                         <hr noshade>
                     </h5>
                     <#if articulo.listaEtiquetas?size gt 0>
-                        <span class="text-primary pb-3 px-3">
+                        <span class="text-primary pb-3">
                             <i class="fas fa-hashtag"></i>
                             <#list articulo.listaEtiquetas as etiqueta>
                                 <a href="/etiqueta/${etiqueta.id}">${etiqueta.etiqueta}</a>
@@ -34,51 +34,30 @@
                         </span>
                     </#if>
                     <h5 class="col-12 pt-3">
-                        <strong><i class="fas fa-eye"></i> REACCIONES</strong>
+                        <th></i> REACCIONES</th>
                         <hr noshade>
                     </h5>
                     <form action="/articulo/${articulo.id}/votar" method="post" class="mx-auto pb-3 pl-3">
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="voto" value="Me gusta">
                             <label class="form-check-label" for="me-gusta">
-                                <i class="fas fa-thumbs-up fa-2x" style="color: #0099ff" title="Me gusta"></i>
+                                <i class="fas fa-thumbs-up" style="color: #0099ff" title="Me gusta"></i>
                                 <span class="badge badge-secondary">${votosMeGusta}</span>
-                            </label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="voto" value="Me encanta">
-                            <label class="form-check-label" for="me-encanta">
-                                <i class="fas fa-smile fa-2x" style="color: yellow" title="Me encanta"></i>
-                                <span class="badge badge-secondary">${votosMeEncanta}</span>
-                            </label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="voto" value="Meh">
-                            <label class="form-check-label" for="meh">
-                                <i class="fas fa-meh fa-2x" style="color: yellow" title="Meh"></i>
-                                <span class="badge badge-secondary">${votosMeh}</span>
                             </label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="voto" value="Me disgusta">
                             <label class="form-check-label" for="me-disgusta">
-                                <i class="fas fa-frown fa-2x" style="color: red" title="Me disgusta"></i>
+                                <i class="fas fa-thumbs-down" style="color: red" title="Me disgusta"></i>
                                 <span class="badge badge-secondary">${votosMeDisgusta}</span>
-                            </label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="voto" value="Me indigna">
-                            <label class="form-check-label" for="me-indigna">
-                                <i class="fas fa-poo fa-2x" style="color: saddlebrown" title="Me indigna"></i>
-                                <span class="badge badge-secondary">${votosMeIndigna}</span>
                             </label>
                         </div>
                         <button type="submit" class="btn btn-outline-light">Reaccionar</button>
                         <br><br>
                         <#if votoActual??>
-                            <p class="mb-0"><strong>Haz reaccionado con un:</strong> ${votoActual.voto}.</p>
+                            <p class="mb-0"><strong>Dijiste:</strong> ${votoActual.voto}.</p>
                         <#else>
-                            <strong>No olvides dejar tu voto.</strong>
+                            <strong>Deja tu voto.</strong>
                         </#if>
                     </form>
                 </div>

@@ -4,7 +4,7 @@
     <h5 class="upbottom-letters text-white text-shadow float-right">
         NO SE ENCONTRO
         <br>
-        EL RECURSO QUE QUERIAS
+        EL RECURSO
         <br>
         VE A <a href="/" class="text-white"><strong>INICIO</strong></a>
     </h5>

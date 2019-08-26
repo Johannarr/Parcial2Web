@@ -276,7 +276,7 @@ public class Rutas {
         get("/registrar", (req, res) -> {
             StringWriter writer = new StringWriter();
             Map<String, Object> atributos = new HashMap<>();
-            Template template = configuration.getTemplate("templates/registro.ftl");
+            Template template = configuration.getTemplate("templates/registroUsuario.ftl");
 
             atributos.put("estaLogueado", req.session().attribute("sesionUsuario") != null);
             atributos.put("nombreUsuario", nombreUsuario);
@@ -331,7 +331,7 @@ public class Rutas {
             get("/crear", (req, res) -> {
                 StringWriter writer = new StringWriter();
                 Map<String, Object> atributos = new HashMap<>();
-                Template template = configuration.getTemplate("templates/crear-articulo.ftl");
+                Template template = configuration.getTemplate("templates/crearArticulo.ftl");
 
                 atributos.put("estaLogueado", req.session().attribute("sesionUsuario") != null);
                 atributos.put("nombreUsuario", nombreUsuario);
@@ -368,7 +368,7 @@ public class Rutas {
             get("/editar/:id", (req, res) -> {
                 StringWriter writer = new StringWriter();
                 Map<String, Object> atributos = new HashMap<>();
-                Template template = configuration.getTemplate("templates/editar-articulo.ftl");
+                Template template = configuration.getTemplate("templates/editarArticulo.ftl");
 
                 Articulo articulo = servicioArticulo.getInstancia().find(Long.parseLong(req.params("id")));
 
@@ -414,7 +414,7 @@ public class Rutas {
             get("/eliminar/:id", (req, res) -> {
                 StringWriter writer = new StringWriter();
                 Map<String, Object> atributos = new HashMap<>();
-                Template template = configuration.getTemplate("templates/eliminar-articulo.ftl");
+                Template template = configuration.getTemplate("templates/eliminarArticulo.ftl");
 
                 Articulo articulo = servicioArticulo.getInstancia().find(Long.parseLong(req.params("id")));
 
@@ -554,7 +554,7 @@ public class Rutas {
         get("/etiqueta/:id", (req, res) -> {
             StringWriter writer = new StringWriter();
             Map<String, Object> atributos = new HashMap<>();
-            Template template = configuration.getTemplate("templates/articulos-por-etiqueta.ftl");
+            Template template = configuration.getTemplate("templates/articulosPorEtiqueta.ftl");
 
             Etiqueta etiquetaSeleccionada = servicioEtiqueta.getInstancia().find(Long.parseLong(req.params("id")));
 
