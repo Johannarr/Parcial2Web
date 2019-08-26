@@ -12,6 +12,7 @@ public class Usuario implements Serializable {
     private String password;
     private boolean administrator;
     private boolean autor;
+    private String sesion;
 
     public Usuario() {
 
@@ -23,6 +24,7 @@ public class Usuario implements Serializable {
         this.password = password;
         this.administrator = administrator;
         this.autor = autor;
+        this.sesion = sesion;
     }
 
     public Usuario(Long id, String username,String nombre, String password, boolean administrator, boolean autor, String sesion) {
@@ -32,6 +34,7 @@ public class Usuario implements Serializable {
         this.password = password;
         this.administrator = administrator;
         this.autor = autor;
+        this.sesion = sesion;
     }
 
     public long getId() {
