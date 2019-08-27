@@ -98,45 +98,20 @@
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="valoracion" value="Me gusta">
                                             <label class="form-check-label" for="me-gusta">
-                                                <i class="fas fa-thumbs-up fa-2x" style="color: #0099ff"
+                                                <i class="fas fa-thumbs-up" style="color: #0099ff"
                                                    title="Me gusta"></i>
                                                 <span class="badge badge-secondary">${comentario.cantidadMeGusta}</span>
                                             </label>
                                         </div>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="valoracion"
-                                                   value="Me encanta">
-                                            <label class="form-check-label" for="me-encanta">
-                                                <i class="fas fa-smile fa-2x" style="color: darkorange"
-                                                   title="Me encanta"></i>
-                                                <span class="badge badge-secondary">${comentario.cantidadMeEncanta}</span>
-                                            </label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="valoracion" value="Meh">
-                                            <label class="form-check-label" for="meh">
-                                                <i class="fas fa-meh fa-2x" style="color: darkorange" title="Meh"></i>
-                                                <span class="badge badge-secondary">${comentario.cantidadMeh}</span>
-                                            </label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="valoracion"
                                                    value="Me disgusta">
                                             <label class="form-check-label" for="me-disgusta">
-                                                <i class="fas fa-frown fa-2x" style="color: red" title="Me disgusta"></i>
+                                                <i class="fas fa-thumbs-down" style="color: red" title="Me disgusta"></i>
                                                 <span class="badge badge-secondary">${comentario.cantidadMeDisgusta}</span>
                                             </label>
                                         </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="valoracion"
-                                                   value="Me indigna">
-                                            <label class="form-check-label" for="me-indigna">
-                                                <i class="fas fa-poo fa-2x" style="color: saddlebrown"
-                                                   title="Me indigna"></i>
-                                                <span class="badge badge-secondary">${comentario.cantidadMeIndigna}</span>
-                                            </label>
-                                        </div>
-                                        <button type="submit" class="btn btn-outline-primary">Reaccionar</button>
+                                       <button type="submit" class="btn btn-outline-primary">Reaccionar</button>
                                     </form>
                                 </div>
                             </div>
