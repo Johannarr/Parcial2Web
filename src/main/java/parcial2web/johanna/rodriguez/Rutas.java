@@ -444,17 +444,12 @@ public class Rutas {
                 Articulo articulo = servicioArticulo.getInstancia().find(Long.parseLong(req.params("id")));
 
                 List<Voto> meGusta = servicioVoto.getInstancia().encontrarVotosPorArticulo(articulo.getId(), "Me gusta");
-                List<Voto> meEncanta = servicioVoto.getInstancia().encontrarVotosPorArticulo(articulo.getId(), "Me encanta");
-                List<Voto> meh = servicioVoto.getInstancia().encontrarVotosPorArticulo(articulo.getId(), "Meh");
                 List<Voto> meDisgusta = servicioVoto.getInstancia().encontrarVotosPorArticulo(articulo.getId(), "Me disgusta");
-                List<Voto> meIndigna = servicioVoto.getInstancia().encontrarVotosPorArticulo(articulo.getId(), "Me indigna");
+
 
 
                 long votosMeGusta = meGusta != null ? meGusta.size() : 0;
-                long votosMeEncanta = meEncanta != null ? meEncanta.size() : 0;
-                long votosMeh = meh != null ? meh.size() : 0;
                 long votosMeDisgusta = meDisgusta != null ? meDisgusta.size() : 0;
-                long votosMeIndigna = meIndigna != null ? meIndigna.size() : 0;
 
                 Voto votoActual = (Voto) servicioVoto.getInstancia().encontrarVotoUsuarioEnArticulo(articulo.getId(), usuario.getId());
 
@@ -462,10 +457,8 @@ public class Rutas {
 
                 for (Comentario comentario : articulo.getListaComentarios()) {
                     comentario.setMeGusta(servicioValoracion.getInstancia().encontrarValoracionesPorComentario(comentario.getId(), "Me gusta"));
-                    comentario.setMeEncanta(servicioValoracion.getInstancia().encontrarValoracionesPorComentario(comentario.getId(), "Me encanta"));
-                    comentario.setMeh(servicioValoracion.getInstancia().encontrarValoracionesPorComentario(comentario.getId(), "Meh"));
                     comentario.setMeDisgusta(servicioValoracion.getInstancia().encontrarValoracionesPorComentario(comentario.getId(), "Me disgusta"));
-                    comentario.setMeIndigna(servicioValoracion.getInstancia().encontrarValoracionesPorComentario(comentario.getId(), "Me indigna"));
+
                 }
 
                 atributos.put("articulo", articulo);
@@ -474,10 +467,7 @@ public class Rutas {
                 atributos.put("tienePermisos", usuario.isAdminstrator() || usuario.isAutor());
                 atributos.put("esAdmin", usuario.isAdminstrator());
                 atributos.put("votosMeGusta", votosMeGusta);
-                atributos.put("votosMeEncanta", votosMeEncanta);
-                atributos.put("votosMeh", votosMeh);
                 atributos.put("votosMeDisgusta", votosMeDisgusta);
-                atributos.put("votosMeIndigna", votosMeIndigna);
                 atributos.put("votoActual", votoActual);
 
                 template.process(atributos, writer);

@@ -10,7 +10,7 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/parcial2web/johanna/rodriguez/Rutas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/parcial2web/johanna/rodriguez/Rutas.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -52,7 +52,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/inicio.ftl">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-887">
@@ -88,11 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/parcial2web/johanna/rodriguez/Rutas.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="219" column="48" lean-forward="true" selection-start-line="219" selection-start-column="48" selection-end-line="219" selection-end-column="48" />
+            <state relative-caret-position="17">
+              <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -210,8 +210,8 @@
         <option value="$PROJECT_DIR$/src/main/java/parcial2web/johanna/rodriguez/encapsulacion/Comentario.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/articulo.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/registroUsuario.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/parcial2web/johanna/rodriguez/Rutas.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/base.ftl" />
+        <option value="$PROJECT_DIR$/src/main/java/parcial2web/johanna/rodriguez/Rutas.java" />
       </list>
     </option>
   </component>
@@ -375,12 +375,12 @@
       <workItem from="1566837392123" duration="1866000" />
       <workItem from="1566844290174" duration="9318000" />
       <workItem from="1566875400354" duration="64000" />
-      <workItem from="1566876168742" duration="2133000" />
+      <workItem from="1566876168742" duration="3028000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30297000" />
+    <option name="totallyTimeSpent" value="31192000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -393,9 +393,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="20" y="40" width="1346" height="728" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2690513" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2690513" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -405,7 +404,7 @@
       <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.35966387" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.35966387" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -849,16 +848,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/parcial2web/johanna/rodriguez/Rutas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="219" column="48" lean-forward="true" selection-start-line="219" selection-start-column="48" selection-end-line="219" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/base.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -870,6 +859,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-887">
           <caret line="4" column="37" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/parcial2web/johanna/rodriguez/Rutas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
