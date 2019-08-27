@@ -75,18 +75,20 @@
                                 <ul class="navbar-nav mr-auto">
                                     <#if permisos>
                                         <li class="nav-item">
+                                            <a class="btn btn-link text-light" href="/articulo/crear">
+                                                <i class="fas fa-plus-square"></i> Nuevo articulo
+                                            </a>
+                                        </li>
+
+                                    </#if>
+                                    <#if admin>
+                                        <li class="nav-item">
                                             <a class="btn btn-link text-light" href="/registrar">
                                                 <i class="fas fa-user-alt"></i> Nuevo usuario
                                             </a>
 
                                         </li>
-                                    </#if>
-                                    <#if admin>
-                                        <li class="nav-item">
-                                            <a class="btn btn-link text-light" href="/articulo/crear">
-                                                <i class="fas fa-plus-square"></i> Nuevo articulo
-                                            </a>
-                                        </li>
+
                                     </#if>
                                 </ul>
                                 <a class="mx-2 nombre-usuario px-3 text-light"><strong>${usuario}</strong></a>

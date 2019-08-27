@@ -207,7 +207,7 @@ public class Rutas {
         get("/inicio/:pagina", (req, res) -> {
             StringWriter writer = new StringWriter();
             Map<String, Object> atributos = new HashMap<>();
-            Template template = configuration.getTemplate("templates/index.ftl");
+            Template template = configuration.getTemplate("templates/inicio.ftl");
 
             int pagina = Integer.parseInt(req.params("pagina"));
 
